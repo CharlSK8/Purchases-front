@@ -1,0 +1,31 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+.bg-image-vertical {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
+
+.box {
+  display: inline-block;
+  width: 45%;
+  height: 100px;
+  position: relative;
+}
+
+.card{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#table{
+ position: absolute;
+ padding-left: 10%;
+ height: 70%;
+}

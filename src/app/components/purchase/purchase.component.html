@@ -1,0 +1,85 @@
+<section class="intro">
+  <div class="bg-image-vertical h-100" style="background-color: #EFD3E4;
+          background-image: url(https://mdbootstrap.com/img/Photos/new-templates/search-box/img1.jpg);
+        ">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+
+            <div class="card" style="border-radius: 1rem;">
+              <div class="card-body p-5">
+                <h2 class="mb-5 text-center">Purchase</h2>
+                <div class="box container-fluid col-xs-6 " id="table" style="text-align: left;">
+                  <h6 style="text-align: center;">Products</h6>
+                  <table class="table table-hover table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Order</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let product of products">
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.currentStock}}</td>
+                        <td><button (click)="ProductsOrder(product)" type="button" class="btn btn-success btn-rounded btn-block">Add</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="box" id= "table2">
+                  <form>
+                    <h6 style="text-align: center;">Products Order</h6>
+                    <table class="table table-hover" >
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Stock</th>
+                          <th scope="col">Order</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let product of productsOrder">
+                          <td>{{product.name}}</td>
+                          <td>{{product.price}}</td>
+                          <td>{{product.currentStock}}</td>
+                          <td><button (click)="RemoveProductsOrder(product)" type="button" class="btn btn-danger btn-rounded btn-block">Remove</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </form>
+                </div>
+                <button (click)="SaveOrder()" type="button" class="btn btn-info btn-rounded btn-block">Save order</button>
+                <div id="table3">
+                  <table class="table table-hover" style="text-align: center;">
+                    <thead>
+                      <tr>
+                        <th scope="col">Order #</th>
+                        <th scope="col">Product name</th>
+                        <th scope="col">Product price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let row of myArray">
+                        <td *ngFor="let col of row"></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

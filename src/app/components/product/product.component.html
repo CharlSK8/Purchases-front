@@ -1,0 +1,71 @@
+<section class="intro">
+  <div class="bg-image-vertical h-100" style="background-color: #EFD3E4;
+          background-image: url(https://mdbootstrap.com/img/Photos/new-templates/search-box/img1.jpg);
+        ">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="card" style="border-radius: 1rem;">
+              <div class="card-body p-5">
+
+                <h2 class="mb-5 text-center">Product</h2>
+                <div class="box">
+                  <form style="text-align: left;">
+
+                    <div class="form-outline mb-4">
+                      <div class="form-outline">
+                        <input [(ngModel)]="product.name" type="text" id="name" class="form-control" name="name"/>
+                        <label class="form-label" for="name">Name</label>
+                      </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input [(ngModel)]="product.description" name="description" type="text" id="description" class="form-control" />
+                      <label class="form-label" for="description">Description</label>
+                    </div>
+
+                    <!-- Text input -->
+                    <div class="form-outline mb-4">
+                      <input [(ngModel)]="product.price" name="price" type="text" id="price" class="form-control" />
+                      <label class="form-label" for="price">Price</label>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input [(ngModel)]="product.currentStock" name="currentStock" type="number" id="stock" class="form-control" />
+                      <label class="form-label" for="stock">Current stock</label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button (click)="SaveProduct()" type="button" class="btn btn-info btn-rounded btn-block">Save Product</button>
+                  </form>
+                </div>
+
+                <div class="box container-fluid col-xs-6 table-responsive" id="table" style="text-align: right;">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Stock</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let product of products">
+                          <td>{{product.name}}</td>
+                          <td>{{product.price}}</td>
+                          <td>{{product.currentStock}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
